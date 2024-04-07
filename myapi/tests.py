@@ -1,13 +1,9 @@
 from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
-from rest_framework.test import APIClient
+from rest_framework.test import APIClient,APITestCase
 from .models import User
 
-from django.urls import reverse
-from rest_framework import status
-from rest_framework.test import APITestCase
-from .models import User
 
 class UserViewSetTestCase(APITestCase):
     def test_create_user(self):
@@ -45,11 +41,11 @@ class ReferralsAPIViewTestCase(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 
-# >>
+# >>TEST RESULTS
 # Found 3 test(s).
 # Creating test database for alias 'default'...
 # System check identified no issues (0 silenced).
-# C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\pagination.py:200: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered 
+# C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\pagination.py:200
 # object_list: <class 'myapi.models.User'> QuerySet.
 #   paginator = self.django_paginator_class(queryset, page_size)
 # ...
