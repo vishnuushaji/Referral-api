@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "dc3b4f32-4bd1-461e-b5f3-1065ef9cccd2",
+		"name": "Ref api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31272105"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\",\r\n    \"email\": \"test@1.com\",\r\n    \"password\": \"pass\",\r\n    \"referral_code\": \"REF123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoyMDI3ODMzODc3LCJpYXQiOjE3MTI0NzM4NzcsImp0aSI6ImIwZDA3YjkyZjQ3NzRlMzJhNTk4MGJmYWIzYjU5ZDQ2IiwidXNlcl9pZCI6OH0.39-ac-11nW9-9d4HkmU9i_fWHDuKJGYu2KFHcdsgINE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user-details/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user-details",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Referrals",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoyMDI3ODMzODI1LCJpYXQiOjE3MTI0NzM4MjUsImp0aSI6IjY5MDRlZTE3YjE2ZDQ1NTBhYzcyYTIwODY1NTU1YmI5IiwidXNlcl9pZCI6N30.aF84qz2ZUaX7plt1l8Seziu-0taREYnhlT0mT9Sfxq8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/referrals/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"referrals",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoyMDI3ODMzODI1LCJpYXQiOjE3MTI0NzM4MjUsImp0aSI6IjY5MDRlZTE3YjE2ZDQ1NTBhYzcyYTIwODY1NTU1YmI5IiwidXNlcl9pZCI6N30.aF84qz2ZUaX7plt1l8Seziu-0taREYnhlT0mT9Sfxq8",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
